@@ -25,7 +25,7 @@ public class Main1 {
 
 		double cad = res.get("quotes").getAsJsonObject().get("USDCAD").getAsDouble();
 
-		Transakcija.konvertuj(t, cad);
+		Transakcija.konvertuj(t, cad, "CAD");
 
 		JSONServis.jsonUFajl(t, "prva_transakcija.json");
 

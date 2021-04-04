@@ -17,7 +17,7 @@ public class APIServis {
 
 	public static final String BASE_URL = "http://api.currencylayer.com/";
 	public static final String ACCESS_KEY = "e4f3be759580705384816b28745d1315";
-
+	public static final String DATUM = "2020-07-24";
 	public static HttpURLConnection get(Transakcija t, String valuta) {
 
 		try {
@@ -27,9 +27,9 @@ public class APIServis {
 			URL url;
 
 			if(valuta != null) {
-				 url = new URL(BASE_URL + "live" + "?access_key=" + ACCESS_KEY + "&source=" + t.getIzvornaValuta() + "&currencies=" + t.getKrajnjaValuta());
+				 url = new URL(BASE_URL + "live" + "?access_key=" + ACCESS_KEY  + "&date=" + DATUM + "&source=" + t.getIzvornaValuta() + "&currencies=" + t.getKrajnjaValuta());
 			}else {
-				 url = new URL(BASE_URL + "live" + "?access_key=" + ACCESS_KEY + "&source=" + t.getIzvornaValuta());
+				 url = new URL(BASE_URL + "live" + "?access_key=" + ACCESS_KEY + "&date=" + DATUM + "&source=" + t.getIzvornaValuta());
 			}
 
 

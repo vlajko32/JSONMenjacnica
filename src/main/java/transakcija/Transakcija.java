@@ -72,10 +72,10 @@ public class Transakcija {
 		super();
 	}
 	
-	public static void konvertuj(Transakcija t, double valuta) {
-		
-			t.setKonvertovaniIznos(t.getPocetniIznos() * valuta);
-		}		
+	public static void konvertuj(Transakcija t, double valuta, String krajnjaValuta) {
+		t.setKonvertovaniIznos(t.getPocetniIznos() * valuta);
+		t.setKrajnjaValuta(krajnjaValuta);
+	}
 	
 }
 
