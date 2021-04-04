@@ -61,6 +61,23 @@ public class Transakcija {
 				+ "]";
 	}
 
+	public Transakcija(String izvornaValuta, double pocetniIznos, Date datumTransakcije) {
+		super();
+		this.izvornaValuta = izvornaValuta;
+		this.pocetniIznos = pocetniIznos;
+		this.datumTransakcije = datumTransakcije;
+	}
 
-
+	public Transakcija() {
+		super();
+	}
+	
+	public static void konvertuj(Transakcija t, double valuta) {
+		
+			t.setKonvertovaniIznos(t.getPocetniIznos() * valuta);
+		}		
+	
 }
+
+
+
